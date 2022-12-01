@@ -1,0 +1,97 @@
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body{
+    align-items: center;
+    background: linear-gradient(320deg, coral, purple, yellow);
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-display: swap;
+    height: inherit;
+    justify-content: center;
+}
+
+.wrapper{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    flex-basis: 400px;
+    height: 600px;
+    padding: 20px 35px;
+}
+
+.calc-btn-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+.calc-btn{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 50%;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 24px;
+    height: 65px;
+}
+
+.calc-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.symbol, .clear, .del, .equal{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 50%;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #232323;
+    background: #d1abfc;
+}
+
+.display{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    padding: 10px 20px 5px 20px;
+    width: 326px;
+    color: #232323;
+    font-size: 45px;
+    overflow: auto;
+    text-align: right;
+    font-family: 'Calculator', sans-serif;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.display .prev-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+
+.display .curr-operand {
+    color: white;
+    font-size: 2.5rem;
+}
