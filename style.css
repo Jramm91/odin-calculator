@@ -13,6 +13,9 @@
     --btn-blue: #3c73ff;
     --btn-blue-hover: #59a8fd;
     --btn-blue-active: #3c73ff;
+    --operator-btn-hover: #c87cfc;
+    --operator-btn-active: #570091;
+    --operator-btn: #b850fc;
 }
 
 *,
@@ -140,6 +143,18 @@ button {
 
 .btn-blue:active {
     background-color: var(--btn-blue-active);
+}
+
+.btn-operator {
+    background-color: var(--operator-btn);
+}
+
+.btn-operator:hover {
+    background-color: var(--operator-btn-hover);
+}
+
+.btn-operator:active {
+    background-color: var(--operator-btn-active);
 }
 
 footer {
