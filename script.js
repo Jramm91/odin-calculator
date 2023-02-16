@@ -24,10 +24,41 @@ deleteBtn.addEventListener('click', handleDelete);
 window.onkeydown = function (e) {
     var key_press = e.key;
     
-    if (key_press >= 0 || key_press <= 9 || key_press === '*' || key_press === '+' || key_press === '-' || key_press === '/') {
-        console.log(key_press);
-    }
-}
+    // handles number inputs
+    if (key_press >= 0 || key_press <= 9)
+    displayNumber(key_press);
+    
+    // handles operators and functional keys
+    switch (key_press) {
+        case '/':
+            key_press = '÷'
+            setOperation(key_press)
+            break;
+        case '*':
+            key_press = '×'
+            setOperation(key_press)   
+            break;
+        case '+':
+            setOperation(key_press)
+            break;
+        case '-':
+            setOperation(key_press)
+            break;
+        case '.':
+            handlePoint(key_press)
+            break;
+        case 'Enter':
+            calculate(key_press)
+            break;
+        case 'Backspace':
+            handleDelete(key_press)
+            break;
+        case 'Escape':
+            clear(key_press)
+            break;    
+            
+    };    
+};
 
 
 numberBtns.forEach((button) => 
