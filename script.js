@@ -67,6 +67,7 @@ function calculate() {
     screenCurrent.textContent = round(operate(currentOperation, previousOperand, nextOperand));
     screenPrevious.textContent = `${previousOperand} ${currentOperation} ${nextOperand} =`
     currentOperation = null
+    shouldResetScreen = true;
 }
 
 function handlePoint() {
