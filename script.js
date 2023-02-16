@@ -20,6 +20,15 @@ clearBtn.addEventListener('click', clear);
 pointBtn.addEventListener('click', handlePoint);
 deleteBtn.addEventListener('click', handleDelete);
 
+// section to handle keyboard inputs
+window.onkeydown = function (e) {
+    var key_press = e.key;
+    
+    if (key_press >= 0 || key_press <= 9 || key_press === '*' || key_press === '+' || key_press === '-' || key_press === '/') {
+        console.log(key_press);
+    }
+}
+
 
 numberBtns.forEach((button) => 
     button.addEventListener('click', () => displayNumber(button.textContent))
